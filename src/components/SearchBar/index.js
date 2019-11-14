@@ -1,11 +1,18 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
 
-function DataView() {
+function SearchBar({ search }) {
   return (
-    <div>
-      SearchBar here
-    </div>
+    <form>
+      <TextField
+        onChange={(e) => search(e.target.value)}
+        id="outlined-basic"
+        label="Search"
+        margin="normal"
+        variant="outlined"
+      />
+    </form>
   );
 }
 
-export default DataView;
+export default SearchBar;
