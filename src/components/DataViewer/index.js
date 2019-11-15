@@ -12,8 +12,8 @@ function DataViewer({ data }) {
       <List aria-label="list of sentences">
         {
           data.map(item => (
-            <ItemWrapper key={item.id} disabled={!item.includes}>
-              <ListItem button={item.includes}>
+            <ItemWrapper key={item.id} disabled={item.disabled}>
+              <ListItem button={!item.disabled}>
                 <Avatar src={item.avatar} />
                 <ListItemText primary={item.data} />
               </ListItem>
